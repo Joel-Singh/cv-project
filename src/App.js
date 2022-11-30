@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import GeneralInformation from "./components/GeneralInformation";
 
 export default class App extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class App extends Component {
 
   render() {
     return (<div>
-        Hello World
+        <GeneralInformation />
       </div>);
   }
 }
