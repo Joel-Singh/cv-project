@@ -8,9 +8,9 @@ export default class GeneralInformation extends Component {
   render() {
     return (
       <div>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+        <input placeholder="Name" type="text" />
+        <input placeholder="Email" type="text" />
+        <input placeholder="Phone Number" type="number" />
       </div>
     )
   }
