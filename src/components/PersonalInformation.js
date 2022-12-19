@@ -8,7 +8,7 @@ export default class PersonalInformation extends Component {
   render() {
     return (
       <div className="card">
-        <input placeholder="First Name" type="text" />
+        <input onInput={this.props.setFirstName} placeholder="First Name" type="text" />
         <input placeholder="Last Name" type="text" />
         <input placeholder="Title" type="text" />
         <input placeholder="Address" type="text" />
