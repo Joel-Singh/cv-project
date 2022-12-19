@@ -2,13 +2,17 @@ import React, { Component } from "react";
 
 export default class PersonalInformation extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
     return (
       <div className="card">
-        <input onInput={this.props.setFirstName} placeholder="First Name" type="text" />
+        <input
+          onInput={this.props.setFirstName}
+          placeholder="First Name"
+          type="text"
+        />
         <input placeholder="Last Name" type="text" />
         <input placeholder="Title" type="text" />
         <input placeholder="Address" type="text" />
@@ -16,6 +20,6 @@ export default class PersonalInformation extends Component {
         <input placeholder="Email" type="text" />
         <input placeholder="Description" type="text" />
       </div>
-    )
+    );
   }
 }

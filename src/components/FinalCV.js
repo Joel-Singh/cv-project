@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class FinalCV extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -13,8 +13,8 @@ export default class FinalCV extends Component {
       address,
       phoneNumber,
       email,
-      description
-    } = this.props
+      description,
+    } = this.props;
 
     return (
       <div className="final-CV">
@@ -26,6 +26,6 @@ export default class FinalCV extends Component {
         <div>{email}</div>
         <div>{description}</div>
       </div>
-    )
+    );
   }
 }

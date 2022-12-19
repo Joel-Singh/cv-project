@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PersonalInformation from "./components/PersonalInformation";
-import Header from './components/Header'
-import './style.css'
+import Header from "./components/Header";
+import "./style.css";
 import FinalCV from "./components/FinalCV";
 
 export default class App extends Component {
@@ -15,22 +15,24 @@ export default class App extends Component {
       phoneNumber: "",
       email: "",
       description: "",
-    }
-    this.setFirstName = this.setFirstName.bind(this)
+    };
+    this.setFirstName = this.setFirstName.bind(this);
   }
 
   setFirstName(event) {
-    let newFirstName = event.target.value
+    let newFirstName = event.target.value;
     this.setState({
       firstName: newFirstName,
-    })
+    });
   }
 
   render() {
-    return (<div className="app">
+    return (
+      <div className="app">
         <Header />
         <PersonalInformation setFirstName={this.setFirstName} />
         <FinalCV firstName={this.state.firstName} />
-      </div>);
+      </div>
+    );
   }
 }

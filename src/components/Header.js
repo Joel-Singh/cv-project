@@ -6,8 +6,6 @@ export default class Header extends Component {
   }
 
   render() {
-    return (<div className="header">
-        CV-Project
-      </div>);
+    return <div className="header">CV-Project</div>;
   }
 }
