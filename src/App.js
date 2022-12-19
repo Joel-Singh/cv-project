@@ -19,31 +19,37 @@ export default class App extends Component {
   }
 
   render() {
-    const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent
+    const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent;
 
-    const updateFirstName   = createStateUpdaterOnEvent('firstName')
-    const updateLastName    = createStateUpdaterOnEvent('lastName')
-    const updateTitle       = createStateUpdaterOnEvent('title')
-    const updateAddress     = createStateUpdaterOnEvent('address')
-    const updatePhoneNumber = createStateUpdaterOnEvent('phoneNumber')
-    const updateEmail       = createStateUpdaterOnEvent('email')
-    const updateDescription = createStateUpdaterOnEvent('description')
+    const personalInformationInput = createPersonalInformationInputWithUpdaters();
 
     return (
       <div className="app">
         <Header />
-        <PersonalInformationInput
-          updateFirstName={updateFirstName}
-          updateLastName={updateLastName}
-          updateTitle={updateTitle}
-          updateAddress={updateAddress}
-          updatePhoneNumber={updatePhoneNumber}
-          updateEmail={updateEmail}
-          updateDescription={updateDescription}
-          />
+        {personalInformationInput}
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
+
+    function createPersonalInformationInputWithUpdaters() {
+      const updateFirstName   = createStateUpdaterOnEvent('firstName')
+      const updateLastName    = createStateUpdaterOnEvent('lastName')
+      const updateTitle       = createStateUpdaterOnEvent('title')
+      const updateAddress     = createStateUpdaterOnEvent('address')
+      const updatePhoneNumber = createStateUpdaterOnEvent('phoneNumber')
+      const updateEmail       = createStateUpdaterOnEvent('email')
+      const updateDescription = createStateUpdaterOnEvent('description')
+
+      return <PersonalInformationInput
+        updateFirstName={updateFirstName}
+        updateLastName={updateLastName}
+        updateTitle={updateTitle}
+        updateAddress={updateAddress}
+        updatePhoneNumber={updatePhoneNumber}
+        updateEmail={updateEmail}
+        updateDescription={updateDescription}
+      />
+    }
   }
 
   createStateUpdaterOnEvent = (nameOfStateVariable) => {
