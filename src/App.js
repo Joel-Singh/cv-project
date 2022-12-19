@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PersonalInformation from "./components/PersonalInformation";
+import Header from './components/Header'
 import './style.css'
 
 export default class App extends Component {
@@ -9,6 +10,7 @@ export default class App extends Component {
 
   render() {
     return (<div className="app">
+        <Header />
         <PersonalInformation />
       </div>);
   }
