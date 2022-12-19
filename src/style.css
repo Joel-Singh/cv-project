@@ -1,20 +1,23 @@
 * {
   box-sizing: content-box;
 }
-html {
-  height: 100vh;
-  width: 100vw;
-}
 
 body {
   padding: 0;
   margin: 0;
-}
-
-body, #root, .app {
-  height: 100%;
+  background-color: grey;
 }
 
 .app {
-  background-color: grey;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+  gap: 5px;
+  background-color: black;
+  padding: 10px;
 }
