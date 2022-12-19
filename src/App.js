@@ -16,7 +16,6 @@ export default class App extends Component {
       email: "",
       description: "",
     };
-    this.setFirstName = this.setFirstName.bind(this);
   }
 
   render() {
@@ -29,7 +28,7 @@ export default class App extends Component {
     );
   }
 
-  setFirstName(event) {
+  setFirstName = event => {
     let newFirstName = event.target.value;
     this.setState({
       firstName: newFirstName,
