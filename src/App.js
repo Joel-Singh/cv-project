@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GeneralInformation from "./components/GeneralInformation";
+import PersonalInformation from "./components/PersonalInformation";
 
 export default class App extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ export default class App extends Component {
 
   render() {
     return (<div>
-        <GeneralInformation />
+        <PersonalInformation />
       </div>);
   }
 }
