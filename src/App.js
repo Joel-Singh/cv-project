@@ -19,19 +19,19 @@ export default class App extends Component {
   }
 
   render() {
-    const createStateSetter = this.createStateSetter
-    let setFirstName = createStateSetter('firstName')
+    const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent
+    let updateFirstName = createStateUpdaterOnEvent('firstName')
 
     return (
       <div className="app">
         <Header />
-        <PersonalInformationInput setFirstName={setFirstName} />
+        <PersonalInformationInput updateFirstName={updateFirstName} />
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
   }
 
-  createStateSetter = (nameOfStateVariable) => {
+  createStateUpdaterOnEvent = (nameOfStateVariable) => {
     return event => {
       let newState = event.target.value;
       this.setState({
