@@ -6,13 +6,10 @@ export default class PersonalInformationInput extends Component {
   }
 
   render() {
+    const { setFirstName } = this.props;
     return (
       <div className="card">
-        <input
-          onInput={this.props.setFirstName}
-          placeholder="First Name"
-          type="text"
-        />
+        <input onInput={ setFirstName } placeholder="First Name" type="text" />
         <input placeholder="Last Name" type="text" />
         <input placeholder="Title" type="text" />
         <input placeholder="Address" type="text" />
