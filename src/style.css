@@ -19,3 +19,14 @@ body {
   padding: 10px;
   max-width: 500px;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+}
