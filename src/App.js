@@ -19,13 +19,6 @@ export default class App extends Component {
     this.setFirstName = this.setFirstName.bind(this);
   }
 
-  setFirstName(event) {
-    let newFirstName = event.target.value;
-    this.setState({
-      firstName: newFirstName,
-    });
-  }
-
   render() {
     return (
       <div className="app">
@@ -34,5 +27,12 @@ export default class App extends Component {
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
+  }
+
+  setFirstName(event) {
+    let newFirstName = event.target.value;
+    this.setState({
+      firstName: newFirstName,
+    });
   }
 }
