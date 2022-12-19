@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PersonalInformation from "./components/PersonalInformation";
+import './style.css'
 
 export default class App extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class App extends Component {
   }
 
   render() {
-    return (<div>
+    return (<div className="app">
         <PersonalInformation />
       </div>);
   }
