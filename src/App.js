@@ -20,12 +20,27 @@ export default class App extends Component {
 
   render() {
     const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent
-    const updateFirstName = createStateUpdaterOnEvent('firstName')
+
+    const updateFirstName   = createStateUpdaterOnEvent('firstName')
+    const updateLastName    = createStateUpdaterOnEvent('lastName')
+    const updateTitle       = createStateUpdaterOnEvent('title')
+    const updateAddress     = createStateUpdaterOnEvent('address')
+    const updatePhoneNumber = createStateUpdaterOnEvent('phoneNumber')
+    const updateEmail       = createStateUpdaterOnEvent('email')
+    const updateDescription = createStateUpdaterOnEvent('description')
 
     return (
       <div className="app">
         <Header />
-        <PersonalInformationInput updateFirstName={updateFirstName} />
+        <PersonalInformationInput
+          updateFirstName={updateFirstName}
+          updateLastName={updateLastName}
+          updateTitle={updateTitle}
+          updateAddress={updateAddress}
+          updatePhoneNumber={updatePhoneNumber}
+          updateEmail={updateEmail}
+          updateDescription={updateDescription}
+          />
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
