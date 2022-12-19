@@ -20,7 +20,7 @@ export default class App extends Component {
 
   render() {
     const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent
-    let updateFirstName = createStateUpdaterOnEvent('firstName')
+    const updateFirstName = createStateUpdaterOnEvent('firstName')
 
     return (
       <div className="app">
