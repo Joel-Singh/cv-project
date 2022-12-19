@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PersonalInformation from "./components/PersonalInformation";
+import PersonalInformationInput from "./components/PersonalInformationInput";
 import Header from "./components/Header";
 import "./style.css";
 import FinalCV from "./components/FinalCV";
@@ -23,7 +23,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <Header />
-        <PersonalInformation setFirstName={this.setFirstName} />
+        <PersonalInformationInput setFirstName={this.setFirstName} />
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
