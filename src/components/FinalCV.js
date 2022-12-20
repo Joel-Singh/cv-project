@@ -18,13 +18,15 @@ export default class FinalCV extends Component {
 
     return (
       <div className="final-CV">
-        <div>{firstName}</div>
-        <div>{lastName}</div>
-        <div>{title}</div>
-        <div>{address}</div>
-        <div>{phoneNumber}</div>
-        <div>{email}</div>
-        <div>{description}</div>
+        <div className="personal-information">
+          <div>{firstName}</div>
+          <div>{lastName}</div>
+          <div>{title}</div>
+          <div>{address}</div>
+          <div>{phoneNumber}</div>
+          <div>{email}</div>
+          <div>{description}</div>
+        </div>
       </div>
     );
   }
