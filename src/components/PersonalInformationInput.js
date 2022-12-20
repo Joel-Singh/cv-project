@@ -14,7 +14,7 @@ export default class PersonalInformationInput extends Component {
       updatePhoneNumber,
       updateEmail,
       updateDescription,
-    } = this.props;
+    } = this.props.updaters;
     return (
       <div className="card">
         <input onInput={ updateFirstName } placeholder="First Name" type="text" />

@@ -21,34 +21,26 @@ export default class App extends Component {
   render() {
     const createStateUpdaterOnEvent = this.createStateUpdaterOnEvent;
 
-    const personalInformationInput = createPersonalInformationInputWithUpdaters();
+    const personalInformationUpdaters = createPersonalInformationStateUpdaters();
 
     return (
       <div className="app">
         <Header />
-        {personalInformationInput}
+        <PersonalInformationInput updaters={personalInformationUpdaters} />
         <FinalCV firstName={this.state.firstName} />
       </div>
     );
 
-    function createPersonalInformationInputWithUpdaters() {
-      const updateFirstName   = createStateUpdaterOnEvent('firstName')
-      const updateLastName    = createStateUpdaterOnEvent('lastName')
-      const updateTitle       = createStateUpdaterOnEvent('title')
-      const updateAddress     = createStateUpdaterOnEvent('address')
-      const updatePhoneNumber = createStateUpdaterOnEvent('phoneNumber')
-      const updateEmail       = createStateUpdaterOnEvent('email')
-      const updateDescription = createStateUpdaterOnEvent('description')
-
-      return <PersonalInformationInput
-        updateFirstName={updateFirstName}
-        updateLastName={updateLastName}
-        updateTitle={updateTitle}
-        updateAddress={updateAddress}
-        updatePhoneNumber={updatePhoneNumber}
-        updateEmail={updateEmail}
-        updateDescription={updateDescription}
-      />
+    function createPersonalInformationStateUpdaters() {
+      const updaters = {}
+      updaters.updateFirstName   = createStateUpdaterOnEvent('firstName')
+      updaters.updateLastName    = createStateUpdaterOnEvent('lastName')
+      updaters.updateTitle       = createStateUpdaterOnEvent('title')
+      updaters.updateAddress     = createStateUpdaterOnEvent('address')
+      updaters.updatePhoneNumber = createStateUpdaterOnEvent('phoneNumber')
+      updaters.updateEmail       = createStateUpdaterOnEvent('email')
+      updaters.updateDescription = createStateUpdaterOnEvent('description')
+      return updaters
     }
   }
 
