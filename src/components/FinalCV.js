@@ -14,7 +14,7 @@ export default class FinalCV extends Component {
       phoneNumber,
       email,
       description,
-    } = this.props;
+    } = this.props.information;
 
     return (
       <div className="final-CV">

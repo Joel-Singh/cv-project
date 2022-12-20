@@ -27,7 +27,7 @@ export default class App extends Component {
       <div className="app">
         <Header />
         <PersonalInformationInput updaters={personalInformationUpdaters} />
-        <FinalCV firstName={this.state.firstName} />
+        <FinalCV information={this.state} />
       </div>
     );
 
